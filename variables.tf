@@ -1,8 +1,5 @@
-variable "apim" {
-  type = object({
-    name                = string
-    resource_group_name = string
-  })
+variable "apim_id" {
+  type = string
 }
 
 variable "workspace" {

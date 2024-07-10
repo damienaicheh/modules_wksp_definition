@@ -1,7 +1,7 @@
 resource "azapi_resource" "workspaces" {
   type = "Microsoft.ApiManagement/service/workspaces@2023-05-01-preview"
   name = var.workspace.name
-  parent_id = data.azurerm_api_management.apim.id
+  parent_id = var.apim_id
   body = jsonencode({
     properties = {
       description = var.workspace.description
